@@ -257,6 +257,9 @@ https://templatemo.com/tm-534-parallo
                           </tbody>
                         </table>
                       </div>
+                      <a href="hapus.php?id=<?= $dt['id']?>"><button type="button" class="btn btn-primary">
+                        Hapus
+                      </button></a>
                     </div>
                   </div>
                 </div>

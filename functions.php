@@ -42,3 +42,11 @@ function tambahData($data)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function hapusData($id)
+{
+    global $conn;
+    $query = "DELETE FROM periode_laba_rugi WHERE id=$id";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
