@@ -82,9 +82,11 @@ https://templatemo.com/tm-534-parallo
                         <th scope="row">Pendapatan Penjualan</th>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Penjualan</th>
+                        <td></td>
                         <td></td>
                         <td><?= $dt['penjualan'] ?></td>
                       </tr>
@@ -92,14 +94,17 @@ https://templatemo.com/tm-534-parallo
                         <th scope="row pl-3">Retur Penjualan</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['retur_penjualan'] ?>)</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Diskon Penjualan</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['potongan_harga'] ?>)</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Pendapatan Penjualan Bersih</th>
+                        <td></td>
                         <td></td>
                         <?php $pendapatan_bersih = (float)$dt['penjualan'] - (float)$dt['retur_penjualan'] - (float)$dt['potongan_harga']; ?>
                         <td><strong><?= $pendapatan_bersih ?></strong></td>
@@ -108,9 +113,11 @@ https://templatemo.com/tm-534-parallo
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Harga Pokok Penjualan</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                       </tr>
@@ -118,25 +125,30 @@ https://templatemo.com/tm-534-parallo
                         <th scope="row pl-3">Persediaan Awal</th>
                         <td><?= $dt['persediaan_barang_jadi_awal'] ?></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Harga Pokok Produksi</th>
                         <td><?= $dt['harga_pokok_produksi'] ?></td>
+                        <td></td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Persediaan Akhir</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['persediaan_barang_akhir'] ?>)</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Harga Pokok Penjualan</th>
+                        <td></td>
                         <td></td>
                         <?php $hpp = (float)$dt['persediaan_barang_jadi_awal'] + (float)$dt['harga_pokok_produksi'] - (float)$dt['persediaan_barang_akhir'] ?>
                         <td><strong><?= $hpp ?></strong></td>
                       </tr>
                       <tr>
                         <th scope="row">Laba Kotor</th>
+                        <td></td>
                         <td></td>
                         <?php $laba_kotor = (float)$pendapatan_bersih - (float)$hpp; ?>
                         <td class="text-primary"><strong><?= $laba_kotor ?></strong></td>
@@ -145,24 +157,29 @@ https://templatemo.com/tm-534-parallo
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Beban Operasional</th>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Total Biaya Penjualan</th>
+                        <td></td>
                         <td class="text-danger">(<?= $dt['total_biaya_operasional'] ?>)</td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Total Biaya Administrasi dan Umum</th>
+                        <td></td>
                         <td class="text-danger">(<?= $dt['total_biaya_administrasi_umum'] ?>)</td>
                         <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Laba Operasional</th>
+                        <td></td>
                         <td></td>
                         <?php $laba_operasional = (float)$laba_kotor - (float)$dt['total_biaya_operasional'] - (float)$dt['total_biaya_administrasi_umum']; ?>
                         <td class="text-primary"><strong><?= $laba_operasional ?></strong></td>
@@ -171,29 +188,36 @@ https://templatemo.com/tm-534-parallo
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row">Pendapatan dan Keuntungan Lain</th>
                         <td></td>
                         <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Pendapatan Bunga</th>
-                        <td></td>
                         <td><?= $dt['pendapatan_bunga']; ?></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Keuntungan Penjualan Investasi</th>
-                        <td></td>
                         <td><?= $dt['keuntungan_investasi']; ?></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Pendapatan Lain-lain</th>
-                        <td></td>
                         <td><?= $dt['pendapatan_lain']; ?></td>
+
+                        <td></td>
+                        <td></td>
                       </tr>
                       <?php $pendapatan_lain = (float)$dt['pendapatan_bunga'] + (float) $dt['keuntungan_investasi'] + (float)$dt['pendapatan_lain'] ?>
                       <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -202,25 +226,31 @@ https://templatemo.com/tm-534-parallo
                         <th scope="row">Beban dan Kerugian Lain</th>
                         <td></td>
                         <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Beban Bunga</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['beban_bunga']; ?>)</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Kerugian Atas Penjualan</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['kerugian_penjualan']; ?>)</td>
+                        <td></td>
                       </tr>
                       <tr>
                         <th scope="row pl-3">Kerugian Lain-lain</th>
                         <td></td>
                         <td class="text-danger">(<?= $dt['kerugian_lain']; ?>)</td>
+                        <td></td>
                       </tr>
                       <?php $beban_lain = (float)$dt['beban_bunga'] + (float) $dt['kerugian_penjualan'] + (float)$dt['kerugian_lain'] ?>
                       <tr>
                         <th scope="row">Laba Sebelum Pajak Penghasilan</th>
+                        <td></td>
                         <td></td>
                         <?php $laba_sebelum_pajak = (float)$laba_operasional + (float)$pendapatan_lain - (float)$beban_lain ?>
                         <td class="text-primary"><strong><?= $laba_sebelum_pajak ?></strong></td>
@@ -228,10 +258,12 @@ https://templatemo.com/tm-534-parallo
                       <tr>
                         <th scope="row pl-3">Pajak Penghasilan</th>
                         <td></td>
+                        <td></td>
                         <td class="text-danger">(<?= $dt['pajak'] ?>)</td>
                       </tr>
                       <tr>
                         <th scope="row">Laba Bersih</th>
+                        <td></td>
                         <td></td>
                         <?php $laba_bersih = (float)$laba_sebelum_pajak - (float)$dt['pajak'] ?>
                         <td class="text-primary"><strong><?= $laba_bersih ?></strong></td>
@@ -251,7 +283,7 @@ https://templatemo.com/tm-534-parallo
               <?php foreach ($data as $dt) : ?>
                 <div class="card">
                   <div class="card-header text-dark">
-                    Periode <?= date('d F Y', strtotime($dt['periode_waktu'])) ?>
+                    Periode <?= date('d F Y', strtotime($dt['created_at'])) ?>
                   </div>
                   <div class="card-body">
                     <table class="table table-hover">
@@ -260,9 +292,11 @@ https://templatemo.com/tm-534-parallo
                           <th scope="row">Pendapatan Penjualan</th>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Penjualan</th>
+                          <td></td>
                           <td></td>
                           <td><?= $dt['penjualan'] ?></td>
                         </tr>
@@ -270,14 +304,17 @@ https://templatemo.com/tm-534-parallo
                           <th scope="row pl-3">Retur Penjualan</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['retur_penjualan'] ?>)</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Diskon Penjualan</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['potongan_harga'] ?>)</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Pendapatan Penjualan Bersih</th>
+                          <td></td>
                           <td></td>
                           <?php $pendapatan_bersih = (float)$dt['penjualan'] - (float)$dt['retur_penjualan'] - (float)$dt['potongan_harga']; ?>
                           <td><strong><?= $pendapatan_bersih ?></strong></td>
@@ -286,9 +323,11 @@ https://templatemo.com/tm-534-parallo
                           <td></td>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Harga Pokok Penjualan</th>
+                          <td></td>
                           <td></td>
                           <td></td>
                         </tr>
@@ -296,25 +335,30 @@ https://templatemo.com/tm-534-parallo
                           <th scope="row pl-3">Persediaan Awal</th>
                           <td><?= $dt['persediaan_barang_jadi_awal'] ?></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Harga Pokok Produksi</th>
                           <td><?= $dt['harga_pokok_produksi'] ?></td>
+                          <td></td>
                           <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Persediaan Akhir</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['persediaan_barang_akhir'] ?>)</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Harga Pokok Penjualan</th>
+                          <td></td>
                           <td></td>
                           <?php $hpp = (float)$dt['persediaan_barang_jadi_awal'] + (float)$dt['harga_pokok_produksi'] - (float)$dt['persediaan_barang_akhir'] ?>
                           <td><strong><?= $hpp ?></strong></td>
                         </tr>
                         <tr>
                           <th scope="row">Laba Kotor</th>
+                          <td></td>
                           <td></td>
                           <?php $laba_kotor = (float)$pendapatan_bersih - (float)$hpp; ?>
                           <td class="text-primary"><strong><?= $laba_kotor ?></strong></td>
@@ -323,24 +367,29 @@ https://templatemo.com/tm-534-parallo
                           <td></td>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Beban Operasional</th>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Total Biaya Penjualan</th>
+                          <td></td>
                           <td class="text-danger">(<?= $dt['total_biaya_operasional'] ?>)</td>
                           <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Total Biaya Administrasi dan Umum</th>
+                          <td></td>
                           <td class="text-danger">(<?= $dt['total_biaya_administrasi_umum'] ?>)</td>
                           <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Laba Operasional</th>
+                          <td></td>
                           <td></td>
                           <?php $laba_operasional = (float)$laba_kotor - (float)$dt['total_biaya_operasional'] - (float)$dt['total_biaya_administrasi_umum']; ?>
                           <td class="text-primary"><strong><?= $laba_operasional ?></strong></td>
@@ -349,29 +398,36 @@ https://templatemo.com/tm-534-parallo
                           <td></td>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row">Pendapatan dan Keuntungan Lain</th>
                           <td></td>
                           <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Pendapatan Bunga</th>
-                          <td></td>
                           <td><?= $dt['pendapatan_bunga']; ?></td>
+                          <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Keuntungan Penjualan Investasi</th>
-                          <td></td>
                           <td><?= $dt['keuntungan_investasi']; ?></td>
+                          <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Pendapatan Lain-lain</th>
-                          <td></td>
                           <td><?= $dt['pendapatan_lain']; ?></td>
+
+                          <td></td>
+                          <td></td>
                         </tr>
                         <?php $pendapatan_lain = (float)$dt['pendapatan_bunga'] + (float) $dt['keuntungan_investasi'] + (float)$dt['pendapatan_lain'] ?>
                         <tr>
+                          <td></td>
                           <td></td>
                           <td></td>
                           <td></td>
@@ -380,25 +436,31 @@ https://templatemo.com/tm-534-parallo
                           <th scope="row">Beban dan Kerugian Lain</th>
                           <td></td>
                           <td></td>
+                          <td></td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Beban Bunga</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['beban_bunga']; ?>)</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Kerugian Atas Penjualan</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['kerugian_penjualan']; ?>)</td>
+                          <td></td>
                         </tr>
                         <tr>
                           <th scope="row pl-3">Kerugian Lain-lain</th>
                           <td></td>
                           <td class="text-danger">(<?= $dt['kerugian_lain']; ?>)</td>
+                          <td></td>
                         </tr>
                         <?php $beban_lain = (float)$dt['beban_bunga'] + (float) $dt['kerugian_penjualan'] + (float)$dt['kerugian_lain'] ?>
                         <tr>
                           <th scope="row">Laba Sebelum Pajak Penghasilan</th>
+                          <td></td>
                           <td></td>
                           <?php $laba_sebelum_pajak = (float)$laba_operasional + (float)$pendapatan_lain - (float)$beban_lain ?>
                           <td class="text-primary"><strong><?= $laba_sebelum_pajak ?></strong></td>
@@ -406,10 +468,12 @@ https://templatemo.com/tm-534-parallo
                         <tr>
                           <th scope="row pl-3">Pajak Penghasilan</th>
                           <td></td>
+                          <td></td>
                           <td class="text-danger">(<?= $dt['pajak'] ?>)</td>
                         </tr>
                         <tr>
                           <th scope="row">Laba Bersih</th>
+                          <td></td>
                           <td></td>
                           <?php $laba_bersih = (float)$laba_sebelum_pajak - (float)$dt['pajak'] ?>
                           <td class="text-primary"><strong><?= $laba_bersih ?></strong></td>
@@ -417,24 +481,26 @@ https://templatemo.com/tm-534-parallo
                       </tbody>
                     </table>
                   </div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Tampilkan</button>
                 </div>
-              <?php endforeach; ?>
             </div>
+          <?php endforeach; ?>
           </div>
         </div>
-
-
-      </section>
-
-      <!-- Page footer -->
-      <footer class="row">
-        <p class="col-12 text-white text-center tm-copyright-text">
-          Copyright &copy; 2020 App Landing Page.
-          Designed by <a href="#" class="tm-copyright-link">TemplateMo</a>
-        </p>
-      </footer>
     </div>
-    <!-- .container-fluid -->
+
+
+    </section>
+
+    <!-- Page footer -->
+    <footer class="row">
+      <p class="col-12 text-white text-center tm-copyright-text">
+        Copyright &copy; 2020 App Landing Page.
+        Designed by <a href="#" class="tm-copyright-link">TemplateMo</a>
+      </p>
+    </footer>
+  </div>
+  <!-- .container-fluid -->
   </div>
 
   <script src="js/jquery.min.js"></script>
